@@ -107,13 +107,13 @@ def parseAndAppend(fileName):
 
 
 def printHelp():
-    print """This script will convert all text within html tags (within a htm(l) file) to resTags. 
-Pass in your html filenames as arguments ie. htmlToRes filename1.html filename2.html etc. . 
-For each file as argument a new version containing the resTags will be created. 
+    print """This script will convert all text within html tags (within an htm(l) file) to resTags. 
+Pass in your html filenames as arguments ie. htmlToRes filename1.html filename2.html etc... 
+For each file passed as an argument a new version containing the resTags will be created. 
 The new file names are the orignal filename +_resed.html. 
 All resTags are saved in a new file named AllResTags.xml. 
 Then the resTags can be added to your survey.xml.
-Your refrenced html files in the html tags in the survey.xml can be replaced by the newly created yourfileName_resed.thml"""
+Your refrenced html files in the html tags in the survey.xml can be replaced by the newly created yourfileName_resed.html"""
     sys.exit()
 
 
@@ -148,6 +148,6 @@ for item in fileList:
     parseAndAppend(item)
 
 if len(fileList) > 0 :
-    print 'Finished running the restag creation find your resTags in this file AllResTags.xml.  Add the resTags to your survey.xml and change all your html file refernces with the newly created yourFileName_resed.html file names'
+    print 'Finished running the restag creation.  Find your resTags in this file: AllResTags.xml.  Add the resTags to your survey.xml and change all your html file references to the newly created yourFileName_resed.html file name'
 else:
     printHelp()   
